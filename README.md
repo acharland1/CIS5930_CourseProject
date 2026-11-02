@@ -6,6 +6,8 @@ paths with fixed priorities, and rolling-horizon space-time reservations.
 All three use the same PettingZoo Parallel environment, FIFO dispatcher,
 service resources, collision rules, and seeded workloads.
 
+**Start here:** [Short Windows visual-demo launch guide](docs/quick-start.md).
+
 This implements the **AGV Port Simulation Refocused Project Plan.docx** already
 in this repository. The earlier 3D outline is retained as reference material;
 3D, material physics, 500-vehicle stress testing, sensors, and RL are outside
