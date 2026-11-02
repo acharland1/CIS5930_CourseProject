@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "port-agv-demo"
+version = "0.1.0"
+description = "Reproducible PettingZoo port AGV path-planning course demo"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "pettingzoo==1.27.0",
+  "gymnasium==1.4.0",
+  "numpy==2.5.4",
+  "pygame==2.6.1",
+  "matplotlib==3.11.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[project.scripts]
+port-agv = "port_agv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: complete transport jobs and API compatibility"]
